@@ -6,11 +6,17 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  -- main theme
   use 'navarasu/onedark.nvim'
+  -- transparent background
   use 'xiyaowong/nvim-transparent'
   -- use 'folke/tokyonight.nvim'
   use 'b3nj5m1n/kommentary'
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'    }
+  -- smooth scroll with <C-d>
+  use 'psliwka/vim-smoothie'
+  -- integration with pywal
+  use 'dylanaraps/wal.vim'
+  use {'marcpartensky/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'    }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
