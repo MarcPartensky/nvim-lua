@@ -3,7 +3,7 @@ FROM archlinux:latest
 LABEL maintainer="Marc Partensky <marc.partensky@gmail.com"
 COPY . /root/.config/nvim
 
-RUN pacman -Syyyu \
+RUN pacman -Syyyu --noconfirm \
         git \
         nodejs \
         npm \
