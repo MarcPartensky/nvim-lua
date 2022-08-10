@@ -21,7 +21,7 @@ return require('packer').startup(function()
   -- integration with pywal
   use 'dylanaraps/wal.vim'
   -- better make
-  use 'jeomake/neomake'
+  use 'neomake/neomake'
   use {'marcpartensky/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'    }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use {
