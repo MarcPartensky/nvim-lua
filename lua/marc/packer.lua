@@ -6,6 +6,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'neovim/nvim-lspconfig'
+  use({ "glepnir/lspsaga.nvim", branch = "main" })
   -- main theme
   use 'navarasu/onedark.nvim'
   -- transparent background
@@ -17,7 +21,7 @@ return require('packer').startup(function()
   -- integration with pywal
   use 'dylanaraps/wal.vim'
   -- better make
-  use 'neomake/neomake'
+  use 'jeomake/neomake'
   use {'marcpartensky/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'    }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use {
