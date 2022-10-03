@@ -19,6 +19,10 @@ return require('packer').startup(function()
   use 'psliwka/vim-smoothie'
   -- integration with pywal
   use 'dylanaraps/wal.vim'
+  use {
+      "terrortylor/nvim-comment",
+      run = require('nvim_comment').setup()
+      }
   -- better make
   use 'neomake/neomake'
   use {'marcpartensky/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'    }
