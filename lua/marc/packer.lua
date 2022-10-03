@@ -23,7 +23,12 @@ return require('packer').startup(function()
   -- better make
   use 'neomake/neomake'
   use {'marcpartensky/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'    }
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use {
+		"nvim-treesitter/nvim-treesitter",
+		-- :TSUpdate[Sync] doesn't exist until plugin/nvim-treesitter is loaded (i.e. not after first install); call update() directly
+		run = function() require("nvim-treesitter.install").update { with_sync = true } end
+	}
+	if packer_bootstrap then require("packer").sync() end
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
 -- or                            , branch = '0.1.x',

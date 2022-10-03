@@ -3,3 +3,5 @@ services:
   nvim-lua:
     image: marcpartensky/nvim-lua
     build: .
+    tty: true
+    stdin_open: true
