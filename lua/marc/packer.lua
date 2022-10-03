@@ -15,7 +15,6 @@ return require('packer').startup(function()
   -- transparent background
   use 'xiyaowong/nvim-transparent'
   -- use 'folke/tokyonight.nvim'
-  use 'b3nj5m1n/kommentary'
   -- smooth scroll with <C-d>
   use 'psliwka/vim-smoothie'
   -- integration with pywal
