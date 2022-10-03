@@ -1,1 +1,1 @@
-vim.keymap.set('n', '<C-,>', ":CommentToggle<CR>", {})
+vim.keymap.set('n', '<C-_>', ":CommentToggle<CR>", {})
