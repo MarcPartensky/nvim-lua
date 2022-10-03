@@ -10,10 +10,11 @@ RUN pacman -Syu --noconfirm \
         npm \
 #         go \
 #         make \
-        python \
+        python-pip \
         neovim
 
 RUN npm i -g neovim
+RUn pip install neovim
 
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
