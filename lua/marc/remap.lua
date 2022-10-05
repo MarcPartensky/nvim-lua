@@ -7,8 +7,9 @@ keymap('n', '<C-t>', ":tabnew<CR>", {})
 keymap('n', 'gp', ":!gp<cr>", {})
 keymap('n', 'gn', ":!gn ", {})
 keymap('n', 'gt', ":!gt ", {})
-keymap('n', '<c-s-insert>', "ggVG", {})
+-- selection
 keymap('n', '<c-a>', "ggVG", {})
+-- save
 keymap('n', '<c-s>', ":w<cr>", {})
 -- fn
 keymap('n', '<f1>', ":PackerSync<cr>", {})
