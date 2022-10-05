@@ -1,5 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
 
+keymap('n', '<C-i>', ":!%<CR>", {})
 -- tabs
 keymap('n', '<C-t>', ":tabnew<CR>", {})
 -- git
