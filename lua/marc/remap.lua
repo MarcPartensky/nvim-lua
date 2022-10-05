@@ -11,4 +11,5 @@ keymap('n', '<c-s-insert>', "ggVG", {})
 keymap('n', '<c-s>', ":w<cr>", {})
 -- fn
 keymap('n', '<f1>', ":PackerSync<cr>", {})
+keymap('n', '<f2>', ":make<cr>", {})
 keymap('n', '<f3>', ":!curl --silent ipconfig.io<cr>", {})
