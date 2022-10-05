@@ -19,4 +19,4 @@ keymap('n', '<f4>', ":make<cr>", {})
 -- markdown preview
 keymap('n', '<mp>', ":MarkdownPreviewToggle", {})
 -- linting
-keymap('n', '<c-i>', ":!pylint %<cr>", {})
+keymap('n', '<c-y>', ":!pylint %<cr>", {})
