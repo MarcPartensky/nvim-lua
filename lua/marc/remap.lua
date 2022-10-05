@@ -1,2 +1,7 @@
 -- local nnoremap = require("marc.keymap").nnoremap
- vim.keymap.set('n', '<C-t>', ":tabnew<CR>", {})
+local keymap = vim.api.nvim_set_keymap
+
+keymap('n', '<C-t>', ":tabnew<CR>", {})
+keymap('n', 'gp', ":!gp<CR>", {})
+keymap('n', 'gn', ":!gn ", {})
+keymap('n', 'gt', ":!gt ", {})
