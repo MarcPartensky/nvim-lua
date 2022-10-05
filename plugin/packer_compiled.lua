@@ -108,6 +108,11 @@ _G.packer_plugins = {
     path = "/home/marc/.local/share/nvim/site/pack/packer/start/neomake",
     url = "https://github.com/neomake/neomake"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/marc/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/marc/.local/share/nvim/site/pack/packer/start/nvim-cmp",
