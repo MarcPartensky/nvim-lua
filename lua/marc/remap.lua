@@ -1,4 +1,3 @@
--- local nnoremap = require("marc.keymap").nnoremap
 local keymap = vim.api.nvim_set_keymap
 
 -- tabs
@@ -16,3 +15,5 @@ keymap('n', '<c-s>', ":w<cr>", {})
 keymap('n', '<f1>', ":PackerSync<cr>", {})
 keymap('n', '<f2>', ":make<cr>", {})
 keymap('n', '<f3>', ":!curl --silent ipconfig.io<cr>", {})
+-- markdown preview
+keymap('n', '<mp>', ":MarkdownPreviewToggle", {})
