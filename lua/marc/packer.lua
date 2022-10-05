@@ -44,4 +44,7 @@ return require('packer').startup(function()
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  use 'kyazdani42/nvim-web-devicons'
+  -- completion
+  use "hrsh7th/nvim-cmp" -- The completion plugin
 end)

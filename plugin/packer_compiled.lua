@@ -102,6 +102,11 @@ _G.packer_plugins = {
     path = "/home/marc/.local/share/nvim/site/pack/packer/start/neomake",
     url = "https://github.com/neomake/neomake"
   },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/marc/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
   ["nvim-comment"] = {
     loaded = true,
     path = "/home/marc/.local/share/nvim/site/pack/packer/start/nvim-comment",
