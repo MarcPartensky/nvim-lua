@@ -93,6 +93,16 @@ _G.packer_plugins = {
     path = "/home/marc/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/marcpartensky/markdown-preview.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/marc/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/marc/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   neomake = {
     loaded = true,
     path = "/home/marc/.local/share/nvim/site/pack/packer/start/neomake",
