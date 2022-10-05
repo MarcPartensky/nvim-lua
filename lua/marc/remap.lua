@@ -8,6 +8,7 @@ keymap('n', 'gp', ":!gp<cr>", {})
 keymap('n', 'gn', ":!gn ", {})
 keymap('n', 'gt', ":!gt ", {})
 keymap('n', 'gl', ":!gpl<cr>", {})
+keymap('n', 'gr', ":!grsh<cr>", {})
 -- selection
 keymap('n', '<c-a>', "ggVG", {})
 -- save
