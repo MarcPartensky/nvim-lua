@@ -14,7 +14,8 @@ keymap('n', '<c-a>', "ggVG", {})
 keymap('n', '<c-s>', ":w<cr>", {})
 -- fn
 keymap('n', '<f1>', ":PackerSync<cr>", {})
-keymap('n', '<f2>', ":make<cr>", {})
+keymap('n', '<f2>', ":!pylint %<cr>", {})
 keymap('n', '<f3>', ":!curl --silent ipconfig.io<cr>", {})
+keymap('n', '<f4>', ":make<cr>", {})
 -- markdown preview
 keymap('n', '<mp>', ":MarkdownPreviewToggle", {})
