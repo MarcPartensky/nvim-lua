@@ -6,10 +6,22 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  -- use 'williamboman/mason.nvim'
+  -- use 'williamboman/mason-lspconfig.nvim'
+
+  -- completion
+  use "hrsh7th/nvim-cmp"
   use 'neovim/nvim-lspconfig'
   use({ "glepnir/lspsaga.nvim", branch = "main" })
+
+  -- comment
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+    }
+
   -- main theme
   use 'navarasu/onedark.nvim'
   -- transparent background
@@ -19,10 +31,6 @@ return require('packer').startup(function()
   use 'psliwka/vim-smoothie'
   -- integration with pywal
   use 'dylanaraps/wal.vim'
-  use {
-      "terrortylor/nvim-comment",
-      run = require('nvim_comment').setup()
-      }
   -- better make
   use 'neomake/neomake'
   use {'marcpartensky/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'    }
@@ -30,13 +38,15 @@ return require('packer').startup(function()
 		"nvim-treesitter/nvim-treesitter",
 		-- :TSUpdate[Sync] doesn't exist until plugin/nvim-treesitter is loaded (i.e. not after first install); call update() directly
 		run = function() require("nvim-treesitter.install").update { with_sync = true } end
-	}
-	if packer_bootstrap then require("packer").sync() end
+    }
+    if packer_bootstrap then require("packer").sync() end
+  -- navigation
   use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.0',
--- or                            , branch = '0.1.x',
-  requires = { {'nvim-lua/plenary.nvim'} }
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'kyazdani42/nvim-web-devicons'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -44,7 +54,4 @@ return require('packer').startup(function()
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-  use 'kyazdani42/nvim-web-devicons'
-  -- completion
-  use "hrsh7th/nvim-cmp" -- The completion plugin
 end)
