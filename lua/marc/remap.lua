@@ -8,6 +8,7 @@ keymap('n', 'gp', ":!gp<cr>", {})
 keymap('n', 'gn', ":!gn ", {})
 keymap('n', 'gt', ":!gt ", {})
 keymap('n', '<c-s-insert>', "ggVG", {})
+keymap('n', '<c-a>', "ggVG", {})
 keymap('n', '<c-s>', ":w<cr>", {})
 -- fn
 keymap('n', '<f1>', ":PackerSync<cr>", {})
