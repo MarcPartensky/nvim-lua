@@ -34,9 +34,14 @@ return require('packer').startup(function()
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
 
-  -- completion
-  use "hrsh7th/nvim-cmp"
-  use 'neovim/nvim-lspconfig'
+  -- raw completion
+  use 'hrsh7th/nvim-cmp' -- the completion plugin
+  use 'hrsh7th/cmp-buffer' -- buffer completions
+  use 'hrsh7th/cmp-path' -- path completions
+  use 'hrsh7th/cmp-cmdline' -- cmdline completions
+  use 'hrsh7th/cmp-nvim-lsp' -- use lsp completions
+
+  use 'neovim/nvim-lspconfig' -- 
   use({ "glepnir/lspsaga.nvim", branch = "main" })
 
   -- comment
@@ -49,7 +54,7 @@ return require('packer').startup(function()
 
   -- main theme
   use 'navarasu/onedark.nvim'
-  -- transparent background
+  -- transparent frontground
   use 'xiyaowong/nvim-transparent'
   -- use 'folke/tokyonight.nvim'
   -- smooth scroll with <C-d>
@@ -73,11 +78,10 @@ return require('packer').startup(function()
     -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'kyazdani42/nvim-web-devicons'
   use {
-    'kyazdani42/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
