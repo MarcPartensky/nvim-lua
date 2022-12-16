@@ -44,6 +44,9 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- 
   use({ "glepnir/lspsaga.nvim", branch = "main" })
 
+  -- buffers (tabs)
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
   -- comment
   use {
     'numToStr/Comment.nvim',
