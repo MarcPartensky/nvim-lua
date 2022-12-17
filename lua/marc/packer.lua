@@ -80,6 +80,7 @@ return require('packer').startup(function()
 	run = function() require("nvim-treesitter.install").update { with_sync = true } end
   }
     if packer_bootstrap then require("packer").sync() end
+
   -- navigation
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -93,6 +94,15 @@ return require('packer').startup(function()
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+
+  -- bottom line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- startup pannel
+  use 'glepnir/dashboard-nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
