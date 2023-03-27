@@ -31,7 +31,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'williamboman/mason.nvim'
+  -- use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
 
   -- raw completion
@@ -42,7 +42,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp' -- use lsp completions
 
   use 'neovim/nvim-lspconfig' -- 
-  use({ "glepnir/lspsaga.nvim", branch = "main" })
+  -- use({ "glepnir/lspsaga.nvim", branch = "main" })
 
   -- buffers (tabs)
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
