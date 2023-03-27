@@ -60,7 +60,7 @@ return require('packer').startup(function()
   use 'navarasu/onedark.nvim'
 
   -- transparent frontground
-  use 'xiyaowong/nvim-transparent'
+  -- use 'xiyaowong/nvim-transparent'
   -- use 'folke/tokyonight.nvim'
   --
   -- smooth scroll with <C-d>
