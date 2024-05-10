@@ -1,3 +1,8 @@
+local lspconfig = require('lspconfig')
+
+-- TypeScript language server setup
+lspconfig.tsserver.setup{}
+
 lua_ls = {
   Lua = {
     workspace = { checkThirdParty = false },

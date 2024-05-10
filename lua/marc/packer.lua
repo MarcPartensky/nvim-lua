@@ -104,6 +104,14 @@ return require('packer').startup(function()
   -- startup pannel
   use 'glepnir/dashboard-nvim'
 
+  -- Lightweight yet powerful formatter plugin for Neovim
+  use({
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
+  })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
