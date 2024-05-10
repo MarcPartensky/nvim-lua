@@ -3,8 +3,8 @@ require('Comment').setup({
     padding = true,
     ---Whether the cursor should stay at its position
     sticky = true,
-    ---Lines to be ignored while (un)comment
-    ignore = nil,
+    -- Lines to be ignored while (un)comment
+    ignore = '^$',
     ---LHS of toggle mappings in NORMAL mode
     toggler = {
         ---Line-comment toggle keymap
