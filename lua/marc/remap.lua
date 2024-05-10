@@ -61,3 +61,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- comments.nvim
+keymap("n", "<C-/>", "<Cmd>lua require('Comment.api').toggle.linewise.current()<CR>", {})
+keymap("i", "<C-/>", "<Cmd>lua require('Comment.api').toggle.linewise.current()<CR>", {})
+keymap("v", "<C-/>", "gc", {})
