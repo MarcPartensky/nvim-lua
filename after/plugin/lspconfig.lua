@@ -1,4 +1,5 @@
-require 'lspconfig'.pyright.setup {}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -74,6 +75,20 @@ require 'lspconfig'.lua_ls.setup {
 require 'lspconfig'.grammarly.setup {
     filetypes = { "markdown" }
 }
+
+require 'lspconfig'.emmet_ls.setup({
+    -- on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+    init_options = {
+        html = {
+            options = {
+                -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+                ["bem.enabled"] = true,
+            },
+        },
+    }
+})
 
 require 'lspconfig'.biome.setup {}
 

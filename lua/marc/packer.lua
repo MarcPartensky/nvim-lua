@@ -72,41 +72,6 @@ return require('packer').startup(function()
     -- better make
     use 'neomake/neomake'
 
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup({
-                pannel = {
-                    enabled = true,
-                    keymap = {
-                        jump_prev = "[[",
-                        jump_next = "]]",
-                        accept = "<CR>",
-                        refresh = "gr",
-                        open = "<C-k>"
-                    },
-                },
-                suggestion = {
-                    enabled = true,
-                    auto_trigger = true,
-                    keymap = {
-                        accept = "<C-l>",
-                        next = "<C-]>",
-                        prev = "<C-[>",
-                    }
-                },
-                filetypes = {
-                    yaml = true,
-                    markdown = true,
-                    lua_ls = true,
-                    ["."] = true,
-                }
-            })
-        end,
-    }
-
     -- markdown
     use { 'marcpartensky/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview' }
     use {
