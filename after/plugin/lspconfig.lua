@@ -32,7 +32,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+    vim.keymap.set('n', '<space>f', vim.lsp.buf.format, bufopts)
 end
 
 local lsp_flags = {
@@ -72,9 +72,28 @@ require 'lspconfig'.lua_ls.setup {
     }
 }
 
+require 'lspconfig'.prismals.setup {}
+
+require 'lspconfig'.svelte.setup {}
+
 require 'lspconfig'.grammarly.setup {
     filetypes = { "markdown" }
 }
+
+require 'lspconfig'.tailwindcss.setup({
+    filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "gohtmltmpl", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact", "vue", "svelte", "templ" },
+})
+
+require 'lspconfig'.eslint.setup({
+    --- ...
+    on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            command = "EslintFixAll",
+        })
+    end,
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte", "astro" },
+})
 
 require 'lspconfig'.emmet_ls.setup({
     -- on_attach = on_attach,
@@ -89,6 +108,8 @@ require 'lspconfig'.emmet_ls.setup({
         },
     }
 })
+
+require 'lspconfig'.prismals.setup {}
 
 require 'lspconfig'.biome.setup {}
 

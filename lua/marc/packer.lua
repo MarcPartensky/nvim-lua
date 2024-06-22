@@ -45,7 +45,14 @@ return require('packer').startup(function()
     -- use({ "glepnir/lspsaga.nvim", branch = "main" })
 
     -- buffers (tabs)
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    -- use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "*",
+        config = function()
+            require('nvim-tree/nvim-web-devicons').setup()
+        end
+    }
     -- use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 
     -- comment
