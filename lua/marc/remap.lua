@@ -53,6 +53,7 @@ keymap('n', '<f4>', ":make ", opts)
 keymap('n', '<mp>', ":MarkdownPreviewToggle", opts)
 -- linting
 keymap('n', '<c-y>', ":!pylint %<cr>", opts)
+keymap('n', '<c-m>', ":!make <cr>", opts)
 
 
 -- split
