@@ -1,5 +1,3 @@
-vim.opt.relativenumber = true
-
-require "marc.set"
-require "marc.remap"
-require "marc.packer"
+require "config.lazy"
+require "config.set"
+require "config.keybinds"
