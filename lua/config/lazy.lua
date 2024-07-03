@@ -15,8 +15,6 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require('lazy').setup({
     -- Example plugins from your list
-    --
-    --
     spec = {
         -- import your plugins
         -- { import = "plugins" },
@@ -41,7 +39,7 @@ require('lazy').setup({
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
-    -- install = { colorscheme = { "habamax" } },
+    -- install = { colorscheme = { "onedark" } }, -- doesnt change a thing
     -- automatically check for plugin updates
     checker = { enabled = true },
     -- {
@@ -50,7 +48,6 @@ require('lazy').setup({
     -- },
     {
         'williamboman/mason-lspconfig.nvim',
-        -- Additional plugin
     },
     {
         'marcpartensky/markdown-preview.nvim',
