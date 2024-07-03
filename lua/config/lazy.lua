@@ -33,7 +33,8 @@ require('lazy').setup({
         { import = "plugins.dashboard" },         -- dashboard when empty tab
         { import = "plugins.lspsaga" },           -- lsp show function params
         { import = "plugins.scrollbar" },         -- scrollbar
-        { import = "plugins.nvim-tree" },         -- tab for file explorer
+        -- { import = "plugins.nvim-tree" },         -- tab for file explorer
+        { import = "plugins.neo-tree" },          -- tab for file explorer
         { import = "plugins.vim-smoothie" },      -- smooth cursor scroll
         { import = "plugins.comment" },           -- comment doesnt work
         { import = "plugins.treesj" },            -- split/join blocks of code

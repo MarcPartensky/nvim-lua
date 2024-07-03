@@ -71,4 +71,5 @@ keymap("i", "<C-/>", "<Cmd>lua require('Comment.api').toggle.linewise.current()<
 keymap("v", "<C-/>", "gc", {})
 
 -- nvim-tree
-keymap("n", "<C-o>", ":NvimTreeToggle<CR>", {})
+-- keymap("n", "<C-o>", ":NvimTreeToggle<CR>", {})
+keymap("n", "<C-o>", ":Neotree toggle<CR>", { noremap = true, silent = true })
