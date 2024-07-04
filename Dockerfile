@@ -3,7 +3,7 @@ FROM alpine:latest
 LABEL maintainer="Marc Partensky <marc.partensky@proton.me"
 
 RUN touch .vimrc
-RUN localedef -i en_US -f UTF-8 en_US.UTF-8
+# RUN localedef -i en_US -f UTF-8 en_US.UTF-8
 
 RUN apk update
 RUN apk add \
