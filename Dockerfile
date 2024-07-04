@@ -10,9 +10,10 @@ RUN apk add \
         git \
         npm \
         yarn \
+        python3 \
 #         go \
 #         make \
-        python-pip \
+        # python-pip \
         neovim
 
 # RUN npm i -g neovim
