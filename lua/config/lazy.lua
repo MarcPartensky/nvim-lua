@@ -49,9 +49,7 @@ require('lazy').setup({
     --     'wbthomason/packer.nvim',
     --     -- This will load packer.nvim
     -- },
-    {
-        'williamboman/mason-lspconfig.nvim',
-    },
+    { 'williamboman/mason-lspconfig.nvim' },
     {
         'marcpartensky/markdown-preview.nvim',
         run = 'cd app && yarn install', -- Assuming this is a necessary setup step
