@@ -40,6 +40,7 @@ require('lazy').setup({
         { import = "plugins.treesj" },            -- split/join blocks of code
         -- { import = "plugins.noice" },             -- notifications
         { import = "plugins.session-manager" },   -- notifications
+        { import = "plugins.dressing" }           -- nice ui for selection
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.

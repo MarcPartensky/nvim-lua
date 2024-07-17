@@ -3,7 +3,7 @@ return {
 
     config = function()
         -- examples for your init.lua
-        vim.api.nvim_set_keymap('n', '<C-o>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+        -- vim.api.nvim_set_keymap('n', '<C-o>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
         local function my_on_attach(bufnr)
             local api = require "nvim-tree.api"
